@@ -1,0 +1,60 @@
+\usepackage[parfill]{parskip}         % Support for American style paragraphs
+\usepackage[utf8]{inputenc}           % Support for UTF-8 encoded input documents
+\usepackage[T1]{fontenc}              % Support for fonts with ÆØÅ and other foreign characters.
+\usepackage{tikz}                     % Drawing tool
+%\usetikzlibrary{arrows.new}           %   arrow tips for the tool
+\usepackage{graphicx}                 % Including graphics and using colours
+\usepackage{xcolor}                   % Defined more color names
+\usepackage{amssymb}                  % Support for alterantive symbols
+\usepackage{amsmath}                  % Support for mathematical symbols
+\usepackage{stmaryrd}                 % Support for \varodot and other symbols
+\usepackage{hyperref}
+\usepackage{cleveref}                 % For extended reference support
+\usepackage[rounded]{syntax}                   % For displaying BNF
+\usepackage{makeidx}                  % For index creation
+% TODOs
+%\usepackage[textwidth=3cm,textsize=footnotesize,colorinlistoftodos,disable]{todonotes} % For handling todos
+\usepackage[textwidth=3cm,textsize=footnotesize,colorinlistoftodos]{todonotes} % For handling todos
+\setlength{\marginparwidth}{3cm}
+\newcommand{\lesstodo}[2][]{\todo[color=green!40,#1]{#2}}
+\newcommand{\moretodo}[2][]{\todo[color=red!40,#1]{#2}}
+\newcommand{\ask}[2][]{\todo[color=blue!40,#1]{#2}}
+%
+\newcommand{\EspressO}{\textbf{Espresso}}
+\newcommand{\Espresso}{\EspressO{} }
+\newcommand{\JavA}{\textbf{Java}}
+\newcommand{\Java}{\JavA{} }
+\newcommand{\CSharP}{\textbf{C\#}}
+\newcommand{\CSharp}{\CSharP{} }
+\newcommand{\CpP}{\textbf{C++}}
+\newcommand{\Cpp}{\CpP{} }
+\newcommand{\SmalltalK}{\textbf{Smalltalk}}
+\newcommand{\Smalltalk}{\SmalltalK{} }
+\newcommand{\Eiffel}{\textbf{Eiffel} }
+\newcommand{\JavascripT}{\textbf{Javascript}}
+\newcommand{\Javascript}{\JavascripT{} }
+\newcommand{\Lisp}{\textbf{LISP} }
+\newcommand{\Fortran}{\textbf{Fortran} }
+\newcommand{\Haskell}{\textbf{Haskell} }
+\newcommand{\PythoN}{\textbf{Python}}
+\newcommand{\Python}{\PythoN{} }
+
+
+\renewcommand{\ulitleft}{\sffamily}
+\renewcommand{\ulitright}{\normalfont}
+\renewcommand{\litleft}{\ttfamily\bfseries\color{blue!75!black}}
+\renewcommand{\litright}{\normalfont}
+\newcommand{\syntgap}{\vspace{2\baselineskip}}
+\newcommand\Power[1]{\mathcal{P}\left(#1\right)}
+\newcommand\PowerS{\mathbb{S}}
+\newcommand\PowerC{\mathbb{C}}
+\newcommand\True{\mathtt{t}}
+\newcommand\False{\mathtt{f}}
+\newcommand\Skip{\mathtt{skip}}
+\newcommand\REF[1]{\cref{#1} ``\nameref{#1}''}
+\newcommand\code[1]{\texttt{#1}}
+\newcommand\scope[1]{\overline{#1}}
+\newcommand\this{\texttt{\color{blue}this}}
+
+% analysis stuff
+\def\l{\ell}

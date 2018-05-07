@@ -1,0 +1,122 @@
+%!TEX root = ../Report.tex
+
+% User defined packages
+\newcommand{\lesstodo}[2][]{\todo[color=green!40,#1]{#2}}
+\newcommand{\moretodo}[2][]{\todo[color=red!40,#1]{#2}}
+\newcommand{\ask}[2][]{\todo[color=blue!40,#1]{#2}}
+\newcommand{\slide}[2]{\cite[pp.~#2]{#1-lecture}}
+
+\usepackage{bookmark}
+
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+\usepackage{tikz-qtree}
+
+\def\a{\texttt{a}}
+\def\b{\texttt{b}}
+\def\RD{\textsf{RD}}
+\def\UD{\textsf{UD}}
+\def\w{\ | \ }
+\def\kill{\textsl{kill}}
+\def\gen{\textsl{gen}}
+\def\used{\textsl{used}}
+\def\slice{\textsl{slice}}
+\def\fv{\textsl{fv}}
+\def\l{\ell}
+\def\A{\mathcal{A}}
+\def\B{\mathcal{B}}
+\def\DS{\textsf{DS}}
+\def\sigmah{\widehat{\sigma}}
+\def\ll{\llbracket}
+\def\rr{\rrbracket}
+\def\tt{\texttt{tt}}
+\def\ff{\texttt{ff}}
+
+\def\F{\mathcal{F}}
+\def\i{\iota}
+\def\f{f_\cdot}
+\def\Z{\mathbb{Z}}
+
+\def\eif{\mbox{if}\ }
+\def\eelse{\mbox{else}\ }
+
+\def\I{\textsf{I}}
+
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand\Power[1]{\mathcal{P}\left(#1\right)}
+
+\def\†{$ & $}
+
+\newcommand{\Ac}[2]{#1_\circ(#2)}
+\newcommand{\Ab}[2]{#1_\bullet(#2)}
+
+\newcommand{\RDc}[1]{\Ac{\RD}{#1}}
+\newcommand{\RDb}[1]{\Ab{\RD}{#1}}
+\newcommand{\DSc}[1]{\Ac{\DS}{#1}}
+\newcommand{\DSb}[1]{\Ab{\DS}{#1}}
+\newcommand{\Ic}[1]{\Ac{\I}{#1}}
+\newcommand{\Ib}[1]{\Ab{\I}{#1}}
+
+\usepackage{multirow}
+
+\usepackage{stmaryrd}
+
+\newcommand{\code}[1]{ {\ttfamily #1} }
+\lstdefinelanguage{while}
+{
+    morekeywords={program,end,int,high,low,skip,read,write,if,then,
+        else,fi,while,do,od},
+    mathescape,
+    morecomment=[n]{(*}{*)},
+}
+
+\newcounter{stm}
+\stepcounter{stm}
+\newcommand{\nextstm}{\refstepcounter{stm}^{\thestm}}
+\makeatletter
+\@addtoreset{stm}{chapter}
+\@addtoreset{stm}{section}
+\@addtoreset{stm}{subsection}
+\@addtoreset{stm}{lstlisting}
+\makeatother
+
+% From
+% http://tex.stackexchange.com/questions/85489/how-to-center-a-lstlisting
+\usepackage{fancybox}
+\makeatletter
+\newenvironment{centeredbox}{% 
+\begin{Sbox}}{% Save the content in a box
+\end{Sbox}\centerline{\parbox{\wd\@Sbox}{\TheSbox}}}% And output it centered
+\makeatother
+
+\crefname{stm}{statement}{statements}
+\Crefname{stm}{Statement}{Statements}
+
+\setsecheadstyle{\LARGE\sffamily}
+\setsubsecheadstyle{\Large\sffamily}
+\setsubsubsecheadstyle{\large\sffamily}
+\setparaheadstyle{\normalfont\sffamily}
+\setsubparaheadstyle{\normalfont\sffamily\itshape}
+
+%\renewcommand{\thesection}{\arabic{chapter}\Alph{section}}
+
+% While language standardisation
+\newcommand{\wlint}[1]{\mathtt{int}\ #1}
+\newcommand{\wlassign}[2]{#1 := #2}
+\newcommand{\wlskip}{\mathtt{skip}}
+\newcommand{\wltrue}{\mathtt{true}}
+\newcommand{\wlfalse}{\mathtt{false}}
+\newcommand{\wlread}[1]{\mathtt{read}\ #1}
+\newcommand{\wlwrite}[1]{\mathtt{write}\ #1}
+\newcommand{\wlbool}[1]{#1}
+\newcommand{\wlifthenelse}[3]{\mathtt{if}\ #1\ \mathtt{then}\ #2\ \mathtt{else}\ #3\ \mathtt{fi}}
+\newcommand{\wlwhile}[2]{\mathtt{while}\ #1\ \texttt{do}\ #2\ \mathtt{od}}
+\newcommand{\wlhigh}{\mathtt{high}}
+\newcommand{\wllow}{\mathtt{low}}
+\newcommand{\wllabel}[2]{#1\ #2}
+\newcommand{\wlprogram}[2]{\mathtt{program}\ #1\ #2\ \mathtt{end}}
+
+
+% Elementary block
+
+\newcommand{\elm}[2]{{[#1]}^{#2}}
