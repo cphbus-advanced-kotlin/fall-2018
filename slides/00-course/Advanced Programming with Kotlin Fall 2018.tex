@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper,final]{article}
+\makeatletter
+\def\input@path{{../setup/}{.}}
+\makeatother
+\usepackage{cph-document}
+\setlength{\parindent}{0cm}     % Default is 15pt.
+\setlength{\parskip}{1em plus4mm minus3mm}
+
+
+\makeindex
+
+\title{Advanced Programming with Kotlin}
+\author{Tobias Grundtvig and Anders Kalhauge}
+
+\date{Fall 2018}
+
+\begin{document}
+\maketitle
+
+The goal of this course is to introduce tools and best practices for ``programming for programmers''. When programming the libraries that other programmers use, you cannot focus on pure functional requirements alone. You have to pay special attention to the operational and developmental requirements\footnote{also known as ``non functional'' requirements} as scalability, robustness, reusability, testability.
+
+Common to these requirements is that they depend on a sound architechture. The use of interfaces is a common feature to obtain those goals. A strongly typed language as Java or C\# or even better Kotlin is well suited for creating such software.
+
+To create new libraries or extend existing libraries, you have to understand the use of them. We'll look at streams and lambdas in Java 8 and Kotlin among other cool stuff, and also touch coroutines in Kotlin.
+
+\section*{Course content}
+
+The course will look at advanced programming using Kotlin with references to Java.
+
+At the end of the course the students:
+
+\begin{itemize}
+	\item Have a general knowledge of architechtures for programming libraries
+	\item Have a general knowledge about the Kotlin programming language
+	\item Knows the concept of lambdas in Kotlin and Java
+	\item Knows the working of streams in Kotlin and Java
+	\item Knows how to support parallelism using streams (and coroutines)
+	\item Knows how to create DSL (domain specific languages) in Kotlin
+  \item Knows where to find additional information
+\end{itemize}
+
+At the end of the course the students can:
+
+\begin{itemize}
+	\item Write libraries using Kotlin and Java
+	\item Argue for a library's operational and developmental qualities
+  \item Use advanced features as streams and lambdas
+\end{itemize}
+
+The students will in groups of two extend a library (chosen by the teachers), and create a library of their own (described in a synopsis, approved by the teachers). Both assignments are mandatory. Groups are expected to present thier solutions, and to review the solutions of two other groups.
+
+\section*{Exam}
+
+\input{section/exam}
+
+\section*{Admission requisite}
+
+\input{section/admission}
+
+\section*{Study points}
+
+\input{section/study-points}
+
+\end{document}
